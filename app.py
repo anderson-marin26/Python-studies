@@ -4,7 +4,7 @@ def search(names):
 	print('Buscar:')
 	name = input()
 
-	if(name in names):
+	if name in names:
 		position = names.index(name)
 
 		print('Encontrado')
@@ -15,7 +15,7 @@ def search(names):
 def change(names):
 	print('Qual nome deseja alterar')
 	name = input()
-	if(name in names):
+	if name in names:
 		position = names.index(name)
 		print('Alterar %s para?' % (names[position]))
 		new_name = input()
@@ -46,19 +46,19 @@ def menu():
 		print('Digite 1 para cadastrar, 2 para listar, 3 para remover, 4 para alterar, 5 para buscar, 0 para terminar')
 		action = input()
 
-		if(action == '1'):
+		if action == '1':
 			register(names)
 
-		if(action == '2'):
+		elif action == '2':
 			list(names)
 
-		if(action == '3'):
+		elif action == '3':
 			remove(names)
 
-		if(action == '4'):
+		elif action == '4':
 			change(names)
 
-		if(action == '5'):
+		elif action == '5':
 			search(names)
 
 menu()

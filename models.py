@@ -16,11 +16,10 @@ class Profile(object):
 	def get_likes(self):
 		return self.__likes
 
-class Data(object):
-   def __init__(self, day, month, year):
-      self.day = day
-      self.month = month
-      self.year = year
+class ProfileVip(Profile):
+	def __init__(self, name, phone, company, nick):
+		super(ProfileVip, self).__init__(name, phone, company)
+		self.nick = nick
 
-   def imprime(self):
-      print('%s/%s/%s' % (self.day, self.month, self.year))
+	def get_credits(self):
+		return super(ProfileVip, self).get_likes() * 10.0
